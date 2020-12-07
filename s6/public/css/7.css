@@ -1,0 +1,14 @@
+section::first-letter{
+ font-size:2em;
+}
+
+section{
+ border:1px solid black;
+ border-radius:5px;
+
+}
+
+section::selection{
+ background-color: black ;
+ color:white;
+}

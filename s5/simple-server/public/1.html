@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<script>
+ window.onload=()=>{
+ const b0=document.getElementById('b0')
+ const content=document.getElementById('content')
+ //b0.addEventListener('click',(evt)=>{})
+ b0.onclick= (evt) =>{
+  content.innerHTML+=`
+  <div>
+   click
+   </div>
+   `
+ }
+ }
+</script>
+
+  <body>
+<input type="button" value="click me!" id=b0 />
+<div id=content></div>
+  </body>
+ </head>
+</html>

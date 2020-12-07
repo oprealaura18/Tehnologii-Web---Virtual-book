@@ -1,0 +1,39 @@
+body {
+ margin: 0px;
+}
+
+.main {
+ height: 100vh;
+ width: 100vw;
+ display: flex;
+}
+
+.sidebar{
+ height: 100vh;
+ width: 30vw;
+ background-color: gold;
+ display: flex;
+ flex-direction: column;
+}
+
+.view {
+ height: 100vh;
+ width: 70vw;
+ background-color: lightblue;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.sidebar-item{
+ height: 33vh;
+ box-sizing: border-box;
+ flex-grow: 1;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.sidebar-item:hover {
+ border: 3px dashed tomato;
+}

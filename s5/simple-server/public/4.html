@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      
+      
+      window.onload = async () => {
+          try{
+            let response = await fetch('http://dummy.restapiexample.com/api/v1/employees')
+          const responseContent = await response.json()
+          const employees = responseContent.data
+          
+            const table = document.getElementById('employeeTable')
+          const tableContent = employees.map(e => `
+          <tr>
+            <td>${e.employee_name}</td>
+            <td>${e.employee_age}</td>
+            <td>${e.employee_salary}</td>
+            </tr>
+          `).join('')
+          table.innerHTML=tableContent
+          }catch(err)
+          {
+              console.warn(err)
+          }
+             
+        }
+
+    </script>
+  </head>
+  <body>
+    <table id=employeeTable></table>
+  </body>
+</html>

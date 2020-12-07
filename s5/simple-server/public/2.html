@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <style>
+    .done{
+     text-decoration:line-through;
+    }
+   </style>
+    <script>
+      window.onload = () => {
+        const todo = document.getElementById('todo')
+        const todoBtn = document.getElementById('todoBtn')
+        const todoList = document.querySelector('#todoList')
+
+        todoBtn.onclick = () => {
+          const value=todo.value
+         //        todoList.innerHTML += `
+         //        <li> ${value} </li>`
+          const todoElement=document.createElement('li')
+          todoElement.onclick=()=>{
+todoElement.classList.toggle('done')
+          }
+          const todoText=document.createTextNode(value)
+          todoElement.appendChild(todoText)
+          todoList.append(todoElement)
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+    <input type=text id=todo >
+    <input type=button value='add todo' id=todoBtn >
+    <ol id=todoList>
+    </ol>
+  </body>
+</html>

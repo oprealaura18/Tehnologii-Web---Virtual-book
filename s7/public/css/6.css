@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+}
+
+#box {
+  height: 100px;
+  width: 100px;
+  border: 5px dashed lightblue;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: rectangle;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes rectangle {
+  from {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  25%{
+    margin-top: 50px;
+    margin-left: calc(100vw - 150px);
+  }
+
+  50%{
+    margin-top: calc(100vh - 150px);
+    margin-left: calc(100vw - 150px);
+  }
+
+  75%{
+    margin-top: calc(100vh - 150px);
+    margin-left: 50px;
+  }
+
+  to {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+}

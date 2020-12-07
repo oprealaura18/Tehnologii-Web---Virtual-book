@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+    .done {
+      text-decoration: line-through;
+    }
+  </style>
+  <script>
+    window.onload = () => {
+      const cells = document.querySelectorAll('#t0 td:last-child')
+      cells.forEach(e => {
+        e.onclick = () => {
+          e.classList.toggle('done')
+          e.innerHTML = e.innerHTML === 'done' ? 'not done' : 'done'
+        }
+      })
+    }
+  </script>
+</head>
+  </head>
+  <body>
+    <table id=t0>
+      <tr>
+        <td>item 1</td><td>not done</td>
+      </tr>
+      <tr> 
+        <td>item 2</td><td>not done</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+body {
+ margin: 0px;
+}
+
+.app {
+ width: 100vw;
+ height: 100vh;
+ display: grid;
+ grid-template-columns: 80% 10% auto;
+ grid-template-rows: 80% auto;
+ grid-template-areas: 
+   "messages users users"
+   "text text send"
+ ;
+}
+
+.user-list {
+ grid-area: users;
+ background-color: lightblue;
+}
+.messages {
+ grid-area: messages;
+ background-color: orange;
+}
+
+.text {
+ grid-area: text;
+ background-color: tomato;
+}
+
+.send {
+ grid-area: send;
+}
+
+.send button{
+ width: 100%;
+ height: 100%;
+ background-color: lightgreen;
+}

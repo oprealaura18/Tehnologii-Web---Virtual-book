@@ -1,0 +1,20 @@
+body {
+ margin: 0px;
+}
+
+.container{
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.component{
+ height: 200px;
+ width: 200px;
+ background-color: lightblue;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
