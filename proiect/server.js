@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const cors = require('cors')
 
-const sequelize = new Sequelize('virtualBook', 'root', 'Teodora17416', {
+const sequelize = new Sequelize('virtualBook', 'root', '123AndAil456', {
   dialect: 'mysql'
 })
 const app = express()
