@@ -57,10 +57,10 @@ class ListGroup extends Component {
     }
 
 
-   filerResult(){
-   this.setState({notes: this.state.notes.filter(option => option.label.toLowerCase()
-   .includes(this.state.filterExp.toLowerCase()))});
-   }
+//    filerResult(){
+//    this.setState({notes: this.state.notes.filter(option => option.label.toLowerCase()
+//    .includes(this.state.filterExp.toLowerCase()))});
+//    }
 
  onChange = (e) =>
         this.setState({ [e.target.name]: e.target.value });
@@ -79,8 +79,12 @@ class ListGroup extends Component {
                         <TableRow>
                             <TableCell>Id</TableCell>
                             <TableCell>Nume</TableCell>
-                            <TableCell align="right">Useri</TableCell>
+                            <TableCell>Useri</TableCell>
+                            
+                            <TableCell>Notita</TableCell>
 
+                            <TableCell>{'Editeaza'}</TableCell>
+                            <TableCell>{'Sterge'}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -89,12 +93,12 @@ class ListGroup extends Component {
                                 <TableCell component="th" scope="row">
                                     {row.idGroup}
                                 </TableCell>
-                                <TableCell align="right">{row.name}</TableCell>
-
-                                <TableCell align="right">{row.notes}</TableCell>
-
-                                <TableCell align="right" onClick={() => this.editGroup(row.idGroup)}><CreateIcon /></TableCell>
-                                <TableCell align="right" onClick={() => this.deleteGroup(row.idGroup)}><DeleteIcon /></TableCell>
+                                <TableCell>{row.name}</TableCell>
+                                <TableCell>{row.login}</TableCell>
+                                <TableCell>{row.notes}</TableCell>
+                                
+                                <TableCell  onClick={() => this.editGroup(row.idGroup)}><CreateIcon /></TableCell>
+                                <TableCell  onClick={() => this.deleteGroup(row.idGroup)}><DeleteIcon /></TableCell>
 
                             </TableRow>
                         ))}

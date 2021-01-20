@@ -8,10 +8,9 @@ class Home extends Component {
             <div>
             <div className="background">
                 <img src={blue}/>
-                <p>Salut</p>
             </div>
             <div>
-                <p>Hello</p>
+                <p id="paragraph1">Bine ati venit!!!</p>
             </div>
             </div>
         );

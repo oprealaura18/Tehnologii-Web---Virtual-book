@@ -37,7 +37,8 @@ class SignUp extends Component {
 
       saveUser = (e) => {
           e.preventDefault();
-          let doc = {nume: this.state.nume, parola: this.state.parola , prenume: this.state.prenume, email: this.state.email, idFacultate: this.state.idFacultate, dataNasterii: this.state.dataNasterii};
+          let doc = {nume: this.state.nume, parola: this.state.parola , prenume: this.state.prenume, email: this.state.email,
+             idFacultate: this.state.idFacultate, dataNasterii: this.state.dataNasterii};
           ApiService.addUser(doc)
               .then(res => {
                   this.setState({message : 'User added successfully.'});

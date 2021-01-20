@@ -92,8 +92,10 @@ class ListNotes extends Component {
                         <TableRow>
                             <TableCell>Id</TableCell>
                             <TableCell>Titlu</TableCell>
-                            <TableCell align="right">Materie</TableCell>
-                            <TableCell align="right">Etichete</TableCell>
+                            <TableCell>Materie</TableCell>
+                            <TableCell>Etichete</TableCell>
+                            <TableCell>Editeaza</TableCell>
+                            <TableCell>Sterge</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -102,12 +104,12 @@ class ListNotes extends Component {
                                 <TableCell component="th" scope="row">
                                     {row.idNotita}
                                 </TableCell>
-                                <TableCell align="right">{row.titlu}</TableCell>
-                                <TableCell align="right">{row.idMaterie}</TableCell>
-                                <TableCell align="right">{row.label}</TableCell>
+                                <TableCell>{row.titlu}</TableCell>
+                                <TableCell>{row.idMaterie}</TableCell>
+                                <TableCell>{row.label}</TableCell>
 
-                                <TableCell align="right" onClick={() => this.editNote(row.idNotita)}><CreateIcon /></TableCell>
-                                <TableCell align="right" onClick={() => this.deleteNote(row.idNotita)}><DeleteIcon /></TableCell>
+                                <TableCell onClick={() => this.editNote(row.idNotita)}><CreateIcon /></TableCell>
+                                <TableCell onClick={() => this.deleteNote(row.idNotita)}><DeleteIcon /></TableCell>
 
                             </TableRow>
                         ))}
@@ -122,21 +124,22 @@ class ListNotes extends Component {
         <TableRow>
         <TableCell>Id</TableCell>
         <TableCell>Titlu</TableCell>
-        <TableCell align="right">Materie</TableCell>
-            <TableCell align="right">Etichete</TableCell>
+        <TableCell>Materie</TableCell>
+            <TableCell>Etichete</TableCell>
+            <TableCell>Editeaza</TableCell>
             </TableRow>
             </TableHead>
             <TableBody>
             {this.state.shared.map(row => (
-                    <TableRow key={row.idNotita}>
+                <TableRow key={row.idNotita}>
                 <TableCell component="th" scope="row">
-                {row.idNotita}
+                       {row.idNotita}
                 </TableCell>
-                <TableCell align="right">{row.titlu}</TableCell>
-                <TableCell align="right">{row.idMaterie}</TableCell>
-                <TableCell align="right">{row.label}</TableCell>
+                <TableCell>{row.titlu}</TableCell>
+                <TableCell>{row.idMaterie}</TableCell>
+                <TableCell>{row.label}</TableCell>
 
-                <TableCell align="right" onClick={() => this.editNote(row.idNotita)}><CreateIcon /></TableCell>
+                <TableCell onClick={() => this.editNote(row.idNotita)}><CreateIcon /></TableCell>
         </TableRow>
     ))}
     </TableBody>

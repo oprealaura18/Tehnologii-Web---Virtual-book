@@ -18,16 +18,12 @@ export const MenuItems = [
     },
 
     {
-      title: 'Editor',
+      title: 'Notes',
             url: '/listnote',
             cName: 'nav-links'
     },
 
-    {
-      title: 'Agenda',
-            url: '/agenda',
-            cName: 'nav-links'
-    },
+   
     {
       title: 'Groups',
             url: '/group',

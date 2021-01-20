@@ -6,7 +6,6 @@ import SignUp from './SignUp/SignUp'
 import TextEditor from './TextEditor/TextEditor'
 import TextEditorEdit from './TextEditor/TextEditorEdit'
 import ListNotes from './List/ListNotes'
-import Agenda from './Agenda/Agenda'
 import ListGroup from './List/ListGroup'
 import Group from './Group/Group'
 import React from "react";
@@ -23,7 +22,6 @@ const AppRouter = () => {
                         <Route path="/editor" component={TextEditor}/>
                         <Route path="/editoredit" component={TextEditorEdit}/>
                         <Route path="/listnote" component={ListNotes}/>
-                        <Route path="/agenda" component={Agenda}/>
                         <Route path="/group" component={ListGroup}/>
                         <Route path="/addgroup" component={Group}/>
                     </Switch>

@@ -1,3 +1,10 @@
 .background {
  background-image: url("./blue.jpg");
 }
+
+#paragraph1{
+    text-align: center;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blueviolet;
+}

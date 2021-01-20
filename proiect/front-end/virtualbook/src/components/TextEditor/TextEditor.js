@@ -89,7 +89,7 @@ toolbarButtonSize: 'large',
                         ? e.data.messages.join('')
                         : '';
                     },
-                    process: function (resp: any) { //success callback transfrom data to defaultHandlerSuccess use.it's up to you.
+                    process: function (resp: any) { 
                       let files = [];
                       files.unshift(resp.data);
                       return {
